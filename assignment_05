@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 --------------------------------------------------------------------------
@@ -64,7 +65,12 @@ operators = {
         "+"  : operator.add,
         "-"  : operator.sub,
         "*"  : operator.mul,
-        "/"  : operator.truediv
+        "/"  : operator.truediv,
+        "<<" : operator.rshift,
+        ">>" : operator.lshift,
+        "%"  : operator.mod,
+        "**" : operator.pow
+        
 }
 
 # ------------------------------------------------------------------------
@@ -75,7 +81,7 @@ def get_user_input():
     try: 
         number1 = float(input("Enter the first number:  "))
         number2 = float(input("Enter the second number: "))
-        op      = input("Enter an opterator (valid operatros are +, -, *, and /): ")
+        op      = input("Enter an opterator (valid operatros are +, -, *, /, <<, >> and **): ")
         return (number1, number2, op)
     except:
         print("Invalid Input")
@@ -101,4 +107,3 @@ if __name__ == "__main__":
             break
         else:    
             print(func(number1, number2))
-            
