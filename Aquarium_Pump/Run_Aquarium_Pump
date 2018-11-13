@@ -1,0 +1,11 @@
+#!/bin/bash
+# --------------------------------------------------------------------------
+# <Same documentation / copyright>
+# --------------------------------------------------------------------------
+cd /var/lib/cloud9/ENGI301/Aquarium_Pump
+
+config-pin p1_29 gpio
+config-pin p1_36 gpio 
+
+python Temp_Motor.py
+
